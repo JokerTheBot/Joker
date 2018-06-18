@@ -7,7 +7,7 @@ from tg_bot import dispatcher, OWNER_ID, SUDO_USERS
 import tg_bot.modules.sql.gpromote_sql as sql
 
 @run_async
-def listsudo(bot: Bot, update: Update):
+def sudolist(bot: Bot, update: Update):
     chat = update.effective_chat
     message = update.effective_message
     reply_msg = ""
@@ -19,5 +19,5 @@ def listsudo(bot: Bot, update: Update):
     return
 
 __mod_name__ = "Bot users"
-BOTUSER_HANDLER = CommandHandler("listsudo", listsudo)
-dispatcher.add_handler(BOTUSER_HANDLER)
+BOTUSER_HANDLER = CommandHandler("sudolist", sudolist)
+dispatcher.add_handler(SUDOLIST_HANDLER)
